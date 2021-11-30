@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="a5c5ae0d-8fa0-4b15-b9ac-5e35377612ef" activeEnvironment="Default" name="GEXAME" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="7299447f-a4c5-49da-af55-51a176efe8d0" wsaVersion="NONE" name="IServerScolaIntegradorbinding" type="wsdl" bindingName="{http://tempuri.org/}IServerScolaIntegradorbinding" soapVersion="1_1" anonymous="optional" definition="http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/wsdl/IServerScolaIntegrador" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/wsdl/IServerScolaIntegrador"><con:part><con:url>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/wsdl/IServerScolaIntegrador</con:url><con:content><![CDATA[<definitions name="IServerScolaIntegradorservice" targetNamespace="http://tempuri.org/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://tempuri.org/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/">
+  <message name="Echo0Request"/>
+  <message name="Echo0Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMV1Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMV1Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVUVS2Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVUVS2Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVAESC3Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVAESC3Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVSANTALUZIA4Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVSANTALUZIA4Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVNAVEGANTES5Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="IntegracaoMVNAVEGANTES5Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecebePedido6Request">
+    <part name="OrdemServicos" type="xs:string"/>
+  </message>
+  <message name="RecebePedido6Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecebePedidoTOTVs7Request">
+    <part name="OrdemServicos" type="xs:string"/>
+  </message>
+  <message name="RecebePedidoTOTVs7Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecebeAtendimentoDB8Request">
+    <part name="XML" type="xs:string"/>
+  </message>
+  <message name="RecebeAtendimentoDB8Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="EnviaLaudoAtendimentoDB9Request">
+    <part name="sChaveIntegracao" type="xs:string"/>
+    <part name="sSenhaIntegracao" type="xs:string"/>
+    <part name="sNroAtendimentoDB" type="xs:string"/>
+  </message>
+  <message name="EnviaLaudoAtendimentoDB9Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="EnviaLaudoAtendimentoPorPeriodoDB10Request">
+    <part name="sChaveIntegracao" type="xs:string"/>
+    <part name="sSenhaIntegracao" type="xs:string"/>
+    <part name="sDataInicialPeriodo" type="xs:string"/>
+    <part name="sDataFinalPeriodo" type="xs:string"/>
+  </message>
+  <message name="EnviaLaudoAtendimentoPorPeriodoDB10Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="GerarClienteSalux11Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="GerarClienteSalux11Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <message name="RecebeLotePardiniDasa12Request">
+    <part name="sXMLInput" type="xs:string"/>
+  </message>
+  <message name="RecebeLotePardiniDasa12Response">
+    <part name="return" type="xs:string"/>
+  </message>
+  <portType name="IServerScolaIntegrador">
+    <operation name="Echo">
+      <input message="tns:Echo0Request"/>
+      <output message="tns:Echo0Response"/>
+    </operation>
+    <operation name="IntegracaoMV">
+      <input message="tns:IntegracaoMV1Request"/>
+      <output message="tns:IntegracaoMV1Response"/>
+    </operation>
+    <operation name="IntegracaoMVUVS">
+      <input message="tns:IntegracaoMVUVS2Request"/>
+      <output message="tns:IntegracaoMVUVS2Response"/>
+    </operation>
+    <operation name="IntegracaoMVAESC">
+      <input message="tns:IntegracaoMVAESC3Request"/>
+      <output message="tns:IntegracaoMVAESC3Response"/>
+    </operation>
+    <operation name="IntegracaoMVSANTALUZIA">
+      <input message="tns:IntegracaoMVSANTALUZIA4Request"/>
+      <output message="tns:IntegracaoMVSANTALUZIA4Response"/>
+    </operation>
+    <operation name="IntegracaoMVNAVEGANTES">
+      <input message="tns:IntegracaoMVNAVEGANTES5Request"/>
+      <output message="tns:IntegracaoMVNAVEGANTES5Response"/>
+    </operation>
+    <operation name="RecebePedido">
+      <input message="tns:RecebePedido6Request"/>
+      <output message="tns:RecebePedido6Response"/>
+    </operation>
+    <operation name="RecebePedidoTOTVs">
+      <input message="tns:RecebePedidoTOTVs7Request"/>
+      <output message="tns:RecebePedidoTOTVs7Response"/>
+    </operation>
+    <operation name="RecebeAtendimentoDB">
+      <input message="tns:RecebeAtendimentoDB8Request"/>
+      <output message="tns:RecebeAtendimentoDB8Response"/>
+    </operation>
+    <operation name="EnviaLaudoAtendimentoDB">
+      <input message="tns:EnviaLaudoAtendimentoDB9Request"/>
+      <output message="tns:EnviaLaudoAtendimentoDB9Response"/>
+    </operation>
+    <operation name="EnviaLaudoAtendimentoPorPeriodoDB">
+      <input message="tns:EnviaLaudoAtendimentoPorPeriodoDB10Request"/>
+      <output message="tns:EnviaLaudoAtendimentoPorPeriodoDB10Response"/>
+    </operation>
+    <operation name="GerarClienteSalux">
+      <input message="tns:GerarClienteSalux11Request"/>
+      <output message="tns:GerarClienteSalux11Response"/>
+    </operation>
+    <operation name="RecebeLotePardiniDasa">
+      <input message="tns:RecebeLotePardiniDasa12Request"/>
+      <output message="tns:RecebeLotePardiniDasa12Response"/>
+    </operation>
+  </portType>
+  <binding name="IServerScolaIntegradorbinding" type="tns:IServerScolaIntegrador">
+    <binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    <operation name="Echo">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#Echo" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="IntegracaoMV">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMV" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="IntegracaoMVUVS">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVUVS" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="IntegracaoMVAESC">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVAESC" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="IntegracaoMVSANTALUZIA">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVSANTALUZIA" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="IntegracaoMVNAVEGANTES">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVNAVEGANTES" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="RecebePedido">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebePedido" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="RecebePedidoTOTVs">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebePedidoTOTVs" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="RecebeAtendimentoDB">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebeAtendimentoDB" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="EnviaLaudoAtendimentoDB">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#EnviaLaudoAtendimentoDB" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="EnviaLaudoAtendimentoPorPeriodoDB">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#EnviaLaudoAtendimentoPorPeriodoDB" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="GerarClienteSalux">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#GerarClienteSalux" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+    <operation name="RecebeLotePardiniDasa">
+      <operation soapAction="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebeLotePardiniDasa" style="rpc" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      <input>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </input>
+      <output>
+        <body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="IServerScolaIntegradorservice">
+    <port name="IServerScolaIntegradorPort" binding="tns:IServerScolaIntegradorbinding">
+      <address location="http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador" xmlns="http://schemas.xmlsoap.org/wsdl/soap/"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint></con:endpoints><con:operation id="1ebba885-bab9-4cf3-84b6-d5f69858f136" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#Echo" name="Echo" bindingOperationName="Echo" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aceaf9f7-0363-4e9d-ba75-8783484b9efc" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:Echo soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#Echo"/></con:call></con:operation><con:operation id="bde3a681-54c0-405b-9ea4-676e27844fda" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#EnviaLaudoAtendimentoDB" name="EnviaLaudoAtendimentoDB" bindingOperationName="EnviaLaudoAtendimentoDB" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ef20d48e-31ed-4586-81f6-65f6558fbd54" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:EnviaLaudoAtendimentoDB soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sChaveIntegracao xsi:type="xsd:string">?</sChaveIntegracao>
+         <sSenhaIntegracao xsi:type="xsd:string">?</sSenhaIntegracao>
+         <sNroAtendimentoDB xsi:type="xsd:string">?</sNroAtendimentoDB>
+      </urn:EnviaLaudoAtendimentoDB>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#EnviaLaudoAtendimentoDB"/></con:call></con:operation><con:operation id="bbd02198-9ee8-483b-bb29-931fdad1e266" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#EnviaLaudoAtendimentoPorPeriodoDB" name="EnviaLaudoAtendimentoPorPeriodoDB" bindingOperationName="EnviaLaudoAtendimentoPorPeriodoDB" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1535a190-afbc-4e6a-afcc-1c68cabfdee3" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:EnviaLaudoAtendimentoPorPeriodoDB soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sChaveIntegracao xsi:type="xsd:string">?</sChaveIntegracao>
+         <sSenhaIntegracao xsi:type="xsd:string">?</sSenhaIntegracao>
+         <sDataInicialPeriodo xsi:type="xsd:string">?</sDataInicialPeriodo>
+         <sDataFinalPeriodo xsi:type="xsd:string">?</sDataFinalPeriodo>
+      </urn:EnviaLaudoAtendimentoPorPeriodoDB>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#EnviaLaudoAtendimentoPorPeriodoDB"/></con:call></con:operation><con:operation id="226ae75b-3743-46c6-807e-dbff0b8d7bbb" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#GerarClienteSalux" name="GerarClienteSalux" bindingOperationName="GerarClienteSalux" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="e6a2c153-ed72-4b1c-8cf3-abb0f775ea9c" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:GerarClienteSalux soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sXMLInput xsi:type="xsd:string">?</sXMLInput>
+      </urn:GerarClienteSalux>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#GerarClienteSalux"/></con:call></con:operation><con:operation id="7f88c79c-0b38-47e7-b30a-65ff1cf28ae8" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMV" name="IntegracaoMV" bindingOperationName="IntegracaoMV" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="aec050a5-9681-4b2d-b9fa-e4d2eb0a526e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:IntegracaoMV soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sXMLInput xsi:type="xsd:string">?</sXMLInput>
+      </urn:IntegracaoMV>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMV"/></con:call></con:operation><con:operation id="37ea9422-07b9-434e-96be-af2deb69c953" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVAESC" name="IntegracaoMVAESC" bindingOperationName="IntegracaoMVAESC" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5bee3b99-f14a-4ca7-bbed-8d75cbc01d00" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:IntegracaoMVAESC soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sXMLInput xsi:type="xsd:string">?</sXMLInput>
+      </urn:IntegracaoMVAESC>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVAESC"/></con:call></con:operation><con:operation id="781292d6-ab97-4ff1-a2ec-9644c1966563" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVNAVEGANTES" name="IntegracaoMVNAVEGANTES" bindingOperationName="IntegracaoMVNAVEGANTES" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="4c236f6f-80e3-4b15-b69f-813488c0c211" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:IntegracaoMVNAVEGANTES soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sXMLInput xsi:type="xsd:string">?</sXMLInput>
+      </urn:IntegracaoMVNAVEGANTES>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVNAVEGANTES"/></con:call></con:operation><con:operation id="f4796201-a943-417b-ac5b-b443215aa232" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVSANTALUZIA" name="IntegracaoMVSANTALUZIA" bindingOperationName="IntegracaoMVSANTALUZIA" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="5dde2699-c6f7-4f79-bb74-58dbfbb90f38" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:IntegracaoMVSANTALUZIA soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sXMLInput xsi:type="xsd:string">?</sXMLInput>
+      </urn:IntegracaoMVSANTALUZIA>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVSANTALUZIA"/></con:call></con:operation><con:operation id="ad5c93de-c935-479c-a70c-7760024b87b0" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVUVS" name="IntegracaoMVUVS" bindingOperationName="IntegracaoMVUVS" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="735ccb0f-0e50-44cb-8f8b-dba69a66b846" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:IntegracaoMVUVS soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <sXMLInput xsi:type="xsd:string">?</sXMLInput>
+      </urn:IntegracaoMVUVS>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#IntegracaoMVUVS"/></con:call></con:operation><con:operation id="cea46b6a-4dc2-4040-b074-a001eb818c4b" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebeAtendimentoDB" name="RecebeAtendimentoDB" bindingOperationName="RecebeAtendimentoDB" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="89aea321-35ad-41f1-a639-a0e31be0c62f" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:RecebeAtendimentoDB soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <XML xsi:type="xsd:string">?</XML>
+      </urn:RecebeAtendimentoDB>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebeAtendimentoDB"/></con:call></con:operation><con:operation id="9201b5ef-52fc-431c-9b3e-727645f7f203" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebeLotePardiniDasa" name="RecebeLotePardiniDasa" bindingOperationName="RecebeLotePardiniDasa" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="eaa9b8eb-8786-422a-8531-611d5f6fb422" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<SOAP-ENV:Envelope xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/"><SOAP-ENV:Header/><SOAP-ENV:Body><urn:RecebeLotePardiniDasa xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+  <sXMLInput xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="xsd:string">
+    <Registro>
+      <Protocolo>2</Protocolo>
+      <ID>15992375</ID>
+      <Lote>
+        <CodLab>1104</CodLab>
+        <CodLoteLab>40002</CodLoteLab>
+        <DataLote>2021-07-06</DataLote>
+        <HoraLote>12:51:35</HoraLote>
+        <Pedido>
+          <CodPedLab>500221276150</CodPedLab>
+          <DataPed>2021-05-21</DataPed>
+          <HoraPed>11:24:00</HoraPed>
+          <Paciente>
+            <CodPacLab>600004813146</CodPacLab>
+            <Nome>Paciente de Teste (Homolog Automatizada, entrada com parâmetros)</Nome>
+            <Sexo>Masculino</Sexo>
+            <DataNasc>1999-05-21</DataNasc>
+          </Paciente>
+          <Exame>
+            <CodExmApoio>PCR|COVID19|1</CodExmApoio>
+            <CodExmLab>39951</CodExmLab>
+            <DescMat>PCR (teste)</DescMat>
+            <DataColeta>2021-05-21</DataColeta>
+            <HoraColeta>11:24:00</HoraColeta>
+          </Exame>
+        </Pedido>
+      </Lote>
+    </Registro>
+  </sXMLInput>
+</urn:RecebeLotePardiniDasa></SOAP-ENV:Body></SOAP-ENV:Envelope>
+]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebeLotePardiniDasa"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="93758180-c7c0-4dc7-9241-d0368830c27d" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebePedido" name="RecebePedido" bindingOperationName="RecebePedido" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="192a5d0b-6951-41aa-862a-4e99c01671b3" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebePedido"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="20beac47-bf38-49c3-baef-cf88b63463ca" isOneWay="false" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebePedidoTOTVs" name="RecebePedidoTOTVs" bindingOperationName="RecebePedidoTOTVs" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="9be3a156-5237-4b69-ba48-c2b3d7568284" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://grupoexame.primusweb.com.br/serverscolaintegrador.exe/soap/IServerScolaIntegrador</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:urn="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <urn:RecebePedidoTOTVs soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <OrdemServicos xsi:type="xsd:string">?</OrdemServicos>
+      </urn:RecebePedidoTOTVs>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="urn:ServerScolaIntegradorIntf-IServerScolaIntegrador#RecebePedidoTOTVs"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
