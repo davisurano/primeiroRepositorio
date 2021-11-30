@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="39ae4584-6ce7-4142-aa70-b81843437505" activeEnvironment="Default" name="Apoiador Pardini" soapui-version="5.6.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" id="67b25b57-ef9c-4254-b87e-52873294bff6" wsaVersion="NONE" name="XMLServerSoap" type="wsdl" bindingName="{http://hermespardini.com.br/b2b/apoio/schemas}XMLServerSoap" soapVersion="1_1" anonymous="optional" definition="https://www.hermespardini.com.br/b2b/HPWS.XMLServer.CLS?WSDL=1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="https://www.hermespardini.com.br/b2b/HPWS.XMLServer.CLS?WSDL=1"><con:part><con:url>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.CLS?WSDL=1</con:url><con:content><![CDATA[<definitions targetNamespace="http://hermespardini.com.br/b2b/apoio/schemas" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:SOAP-ENC="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s0="http://hermespardini.com.br/b2b/apoio/schemas" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <types>
+    <s:schema targetNamespace="http://hermespardini.com.br/b2b/apoio/schemas">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <s:import namespace="http://schemas.xmlsoap.org/wsdl/"/>
+      <s:complexType name="ListaErro">
+        <s:sequence>
+          <s:element minOccurs="0" name="Erro" type="s0:ArrayOfErro"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfErro">
+        <s:complexContent mixed="false">
+          <s:restriction base="SOAP-ENC:Array">
+            <s:attribute wsdl:arrayType="s0:Erro[]" ref="SOAP-ENC:arrayType"/>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Erro">
+        <s:sequence>
+          <s:element minOccurs="0" name="Codigo" type="s:long"/>
+          <s:element minOccurs="0" name="Mensagem" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="XMLPendenciaTecnica">
+        <s:sequence>
+          <s:element minOccurs="0" name="PendenciasTecnicas" type="s0:ArrayOfPendenciaTecnicaPedido"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfPendenciaTecnicaPedido">
+        <s:complexContent mixed="false">
+          <s:restriction base="SOAP-ENC:Array">
+            <s:attribute wsdl:arrayType="s0:PendenciaTecnicaPedido[]" ref="SOAP-ENC:arrayType"/>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PendenciaTecnicaPedido">
+        <s:sequence>
+          <s:element name="codLab" type="s:string"/>
+          <s:element name="codPedApoio" type="s:string"/>
+          <s:element name="dataPed" type="s:string"/>
+          <s:element minOccurs="0" name="nomePac" type="s:string"/>
+          <s:element minOccurs="0" name="origemPed" type="s:string"/>
+          <s:element minOccurs="0" name="codPedLab" type="s:string"/>
+          <s:element minOccurs="0" name="dataHoraInicialPendencia" type="s:dateTime"/>
+          <s:element minOccurs="0" name="dataHoraFinalPendencia" type="s:dateTime"/>
+          <s:element minOccurs="0" name="situacaoPendencia" type="s:string"/>
+          <s:element minOccurs="0" name="exames" type="s0:ArrayOfexamePendenciaTecnicaExame"/>
+          <s:element minOccurs="0" name="observacaoPedido" type="s:string"/>
+          <s:element minOccurs="0" name="retorno" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfexamePendenciaTecnicaExame">
+        <s:complexContent mixed="false">
+          <s:restriction base="SOAP-ENC:Array">
+            <s:attribute wsdl:arrayType="s0:PendenciaTecnicaExame[]" ref="SOAP-ENC:arrayType"/>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="PendenciaTecnicaExame">
+        <s:sequence>
+          <s:element minOccurs="0" name="mnMaterial" type="s:string"/>
+          <s:element minOccurs="0" name="mnExame" type="s:string"/>
+          <s:element minOccurs="0" name="sqeExa" type="s:string"/>
+          <s:element minOccurs="0" name="observacaoDoExame" type="s:string"/>
+          <s:element minOccurs="0" name="disposicao" type="s:string"/>
+          <s:element minOccurs="0" name="pendencia" type="s:string"/>
+          <s:element minOccurs="0" name="detalhamentoPendencia" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="XMLRastreabilidade">
+        <s:sequence>
+          <s:element minOccurs="0" name="Rastreabilidade" type="s0:ArrayOfRastreabilidadeAmostra"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRastreabilidadeAmostra">
+        <s:complexContent mixed="false">
+          <s:restriction base="SOAP-ENC:Array">
+            <s:attribute wsdl:arrayType="s0:RastreabilidadeAmostra[]" ref="SOAP-ENC:arrayType"/>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RastreabilidadeAmostra">
+        <s:sequence>
+          <s:element minOccurs="0" name="unidade" type="s:string"/>
+          <s:element name="pedido" type="s:string"/>
+          <s:element name="amostra" type="s:string"/>
+          <s:element minOccurs="0" name="nomePac" type="s:string"/>
+          <s:element minOccurs="0" name="idtuboLab" type="s:string"/>
+          <s:element minOccurs="0" name="etqCodBar" type="s:string"/>
+          <s:element minOccurs="0" name="origemPed" type="s:string"/>
+          <s:element name="dataHoraStatusAmostra" type="s:dateTime"/>
+          <s:element minOccurs="0" name="codStatus" type="s:string"/>
+          <s:element minOccurs="0" name="descricaoStatus" type="s:string"/>
+          <s:element minOccurs="0" name="informacaoComplementar" type="s:string"/>
+          <s:element minOccurs="0" name="exames" type="s0:ArrayOfexameRastreabilidadeExame"/>
+          <s:element minOccurs="0" name="retorno" type="s:string"/>
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfexameRastreabilidadeExame">
+        <s:complexContent mixed="false">
+          <s:restriction base="SOAP-ENC:Array">
+            <s:attribute wsdl:arrayType="s0:RastreabilidadeExame[]" ref="SOAP-ENC:arrayType"/>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="RastreabilidadeExame">
+        <s:sequence>
+          <s:element minOccurs="0" name="mnMaterial" type="s:string"/>
+          <s:element minOccurs="0" name="mnExame" type="s:string"/>
+          <s:element minOccurs="0" name="sqeExa" type="s:string"/>
+          <s:element minOccurs="0" name="codStatus" type="s:decimal"/>
+          <s:element minOccurs="0" name="descricaoStatus" type="s:string"/>
+          <s:element minOccurs="0" name="dataHoraStatusExame" type="s:dateTime"/>
+        </s:sequence>
+      </s:complexType>
+    </s:schema>
+  </types>
+  <message name="cancelaAmostraSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="idTuboLab" type="s:string"/>
+  </message>
+  <message name="cancelaAmostraSoapOut">
+    <part name="cancelaAmostraResult" type="s:string"/>
+  </message>
+  <message name="cancelaExameSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="codPedApoio" type="s:string"/>
+    <part name="codExmApoio" type="s:string"/>
+  </message>
+  <message name="cancelaExameSoapOut">
+    <part name="cancelaExameResult" type="s:string"/>
+  </message>
+  <message name="getGrupoFracionamentoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+  </message>
+  <message name="getGrupoFracionamentoSoapOut">
+    <part name="getGrupoFracionamentoResult" type="s:string"/>
+  </message>
+  <message name="getListaErroPedidoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+  </message>
+  <message name="getListaErroPedidoSoapOut">
+    <part name="getListaErroPedidoResult" type="s0:ListaErro"/>
+  </message>
+  <message name="getPedidoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="XML" type="s:string"/>
+  </message>
+  <message name="getPedidoSoapOut">
+    <part name="getPedidoResult" type="s:string"/>
+  </message>
+  <message name="getPendenciaTecnicaSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="dataInicial" type="s:string"/>
+    <part name="dataFinal" type="s:string"/>
+    <part name="horaInicial" type="s:string"/>
+    <part name="horaFinal" type="s:string"/>
+  </message>
+  <message name="getPendenciaTecnicaSoapOut">
+    <part name="getPendenciaTecnicaResult" type="s0:XMLPendenciaTecnica"/>
+  </message>
+  <message name="getRastreabilidadeSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="dataInicial" type="s:string"/>
+    <part name="dataFinal" type="s:string"/>
+    <part name="horaInicial" type="s:string"/>
+    <part name="horaFinal" type="s:string"/>
+  </message>
+  <message name="getRastreabilidadeSoapOut">
+    <part name="getRastreabilidadeResult" type="s0:XMLRastreabilidade"/>
+  </message>
+  <message name="getResultadoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="XML" type="s:string"/>
+  </message>
+  <message name="getResultadoSoapOut">
+    <part name="getResultadoResult" type="s:string"/>
+  </message>
+  <message name="getResultadoPedidoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="anoCodPedApoio" type="s:long"/>
+    <part name="CodPedApoio" type="s:string"/>
+    <part name="CodExmApoio" type="s:string"/>
+    <part name="PDF" type="s:long"/>
+    <part name="versaoResultado" type="s:long"/>
+    <part name="papelTimbrado" type="s:boolean"/>
+  </message>
+  <message name="getResultadoPedidoSoapOut">
+    <part name="getResultadoPedidoResult" type="s:string"/>
+  </message>
+  <message name="getUltimoResultadoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="XML" type="s:string"/>
+  </message>
+  <message name="getUltimoResultadoSoapOut">
+    <part name="getUltimoResultadoResult" type="s:string"/>
+  </message>
+  <message name="putInformacaoComplementarSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="XML" type="s:string"/>
+  </message>
+  <message name="putInformacaoComplementarSoapOut">
+    <part name="putInformacaoComplementarResult" type="s:string"/>
+  </message>
+  <message name="verificarRecebimentoPedidoSoapIn">
+    <part name="login" type="s:string"/>
+    <part name="passwd" type="s:string"/>
+    <part name="ids" type="s:string"/>
+    <part name="unidade" type="s:long"/>
+  </message>
+  <message name="verificarRecebimentoPedidoSoapOut">
+    <part name="verificarRecebimentoPedidoResult" type="s:string"/>
+  </message>
+  <portType name="XMLServerSoap">
+    <operation name="cancelaAmostra">
+      <input message="s0:cancelaAmostraSoapIn"/>
+      <output message="s0:cancelaAmostraSoapOut"/>
+    </operation>
+    <operation name="cancelaExame">
+      <input message="s0:cancelaExameSoapIn"/>
+      <output message="s0:cancelaExameSoapOut"/>
+    </operation>
+    <operation name="getGrupoFracionamento">
+      <input message="s0:getGrupoFracionamentoSoapIn"/>
+      <output message="s0:getGrupoFracionamentoSoapOut"/>
+    </operation>
+    <operation name="getListaErroPedido">
+      <input message="s0:getListaErroPedidoSoapIn"/>
+      <output message="s0:getListaErroPedidoSoapOut"/>
+    </operation>
+    <operation name="getPedido">
+      <input message="s0:getPedidoSoapIn"/>
+      <output message="s0:getPedidoSoapOut"/>
+    </operation>
+    <operation name="getPendenciaTecnica">
+      <input message="s0:getPendenciaTecnicaSoapIn"/>
+      <output message="s0:getPendenciaTecnicaSoapOut"/>
+    </operation>
+    <operation name="getRastreabilidade">
+      <input message="s0:getRastreabilidadeSoapIn"/>
+      <output message="s0:getRastreabilidadeSoapOut"/>
+    </operation>
+    <operation name="getResultado">
+      <input message="s0:getResultadoSoapIn"/>
+      <output message="s0:getResultadoSoapOut"/>
+    </operation>
+    <operation name="getResultadoPedido">
+      <input message="s0:getResultadoPedidoSoapIn"/>
+      <output message="s0:getResultadoPedidoSoapOut"/>
+    </operation>
+    <operation name="getUltimoResultado">
+      <input message="s0:getUltimoResultadoSoapIn"/>
+      <output message="s0:getUltimoResultadoSoapOut"/>
+    </operation>
+    <operation name="putInformacaoComplementar">
+      <input message="s0:putInformacaoComplementarSoapIn"/>
+      <output message="s0:putInformacaoComplementarSoapOut"/>
+    </operation>
+    <operation name="verificarRecebimentoPedido">
+      <input message="s0:verificarRecebimentoPedidoSoapIn"/>
+      <output message="s0:verificarRecebimentoPedidoSoapOut"/>
+    </operation>
+  </portType>
+  <binding name="XMLServerSoap" type="s0:XMLServerSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="rpc"/>
+    <operation name="cancelaAmostra">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.cancelaAmostra" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="cancelaExame">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.cancelaExame" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getGrupoFracionamento">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getGrupoFracionamento" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getListaErroPedido">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getListaErroPedido" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getPedido">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getPedido" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getPendenciaTecnica">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getPendenciaTecnica" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getRastreabilidade">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getRastreabilidade" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getResultado">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getResultado" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getResultadoPedido">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getResultadoPedido" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="getUltimoResultado">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getUltimoResultado" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="putInformacaoComplementar">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.putInformacaoComplementar" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+    <operation name="verificarRecebimentoPedido">
+      <soap:operation soapAction="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.verificarRecebimentoPedido" style="rpc"/>
+      <input>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </input>
+      <output>
+        <soap:body use="encoded" namespace="http://hermespardini.com.br/b2b/apoio/schemas" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="XMLServer">
+    <port name="XMLServerSoap" binding="s0:XMLServerSoap">
+      <soap:address location="https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls"/>
+    </port>
+  </service>
+</definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint></con:endpoints><con:operation id="fd1d900c-cf2f-418e-a368-5fabe0f03853" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.cancelaAmostra" name="cancelaAmostra" bindingOperationName="cancelaAmostra" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="916f5ab1-3428-42b8-8ecd-a811bb9f9034" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:cancelaAmostra soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <idTuboLab xsi:type="xsd:string">?</idTuboLab>
+      </sch:cancelaAmostra>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.cancelaAmostra"/></con:call></con:operation><con:operation id="f21ff41b-45f0-499f-8be5-3902bcd2e605" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.cancelaExame" name="cancelaExame" bindingOperationName="cancelaExame" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="dd22162a-b13d-4f15-87fb-19bd38fbec3e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:cancelaExame soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <codPedApoio xsi:type="xsd:string">?</codPedApoio>
+         <codExmApoio xsi:type="xsd:string">?</codExmApoio>
+      </sch:cancelaExame>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.cancelaExame"/></con:call></con:operation><con:operation id="169c322e-849d-400e-bcfd-3298e1c21163" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getGrupoFracionamento" name="getGrupoFracionamento" bindingOperationName="getGrupoFracionamento" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="1954ba66-0b56-401f-a8bd-e60102d8329e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getGrupoFracionamento soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+      </sch:getGrupoFracionamento>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getGrupoFracionamento"/></con:call></con:operation><con:operation id="711dcde8-6824-4e04-a85b-16ad866f8a72" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getListaErroPedido" name="getListaErroPedido" bindingOperationName="getListaErroPedido" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="df097652-daab-4c9e-bde2-cd13baa546ab" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getListaErroPedido soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+      </sch:getListaErroPedido>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getListaErroPedido"/></con:call></con:operation><con:operation id="993d2b5c-01b6-4f53-87f2-c38c80a461b2" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getPedido" name="getPedido" bindingOperationName="getPedido" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="c0e087ab-91c4-41c8-90f5-a512ff0cb8bf" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getPedido soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">15665</login>
+         <passwd xsi:type="xsd:string">5431</passwd>
+         <XML xsi:type="xsd:string"><![CDATA[<Registro>
+  <Protocolo>2</Protocolo>
+  <ID>1767</ID>
+  <Lote>
+    <CodLab>15665</CodLab>
+    <CodLoteLab>1003</CodLoteLab>
+    <DataLote>2021-09-21</DataLote>
+    <HoraLote>11:53:34</HoraLote>
+    <Pedido>
+      <CodPedLab>800005106628</CodPedLab>
+      <DataPed>2021-09-21</DataPed>
+      <HoraPed>11:47:00</HoraPed>
+      <Paciente>
+        <CodPacLab>100014650079</CodPacLab>
+        <Nome>Teste Integração Pardini</Nome>
+        <Sexo>Masculino</Sexo>
+        <DataNasc>1980-01-01</DataNasc>
+      </Paciente>
+      <Exame>
+        <IdTuboLab>800005106628</IdTuboLab>
+        <CodExmApoio>DIV|COV19|1</CodExmApoio>
+        <CodExmLab>4625</CodExmLab>
+        <DescMat>Swab</DescMat>
+        <DataColeta>2021-09-21</DataColeta>
+        <HoraColeta>11:47:00</HoraColeta>
+      </Exame>
+    </Pedido>
+  </Lote>
+</Registro>]]]]>><![CDATA[</XML>
+      </sch:getPedido>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getPedido"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="b4f93940-61cc-4e82-a978-b488dd055172" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getPendenciaTecnica" name="getPendenciaTecnica" bindingOperationName="getPendenciaTecnica" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="d805b0cf-076b-45f0-bfc2-5ebb8f775d55" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getPendenciaTecnica soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <dataInicial xsi:type="xsd:string">?</dataInicial>
+         <dataFinal xsi:type="xsd:string">?</dataFinal>
+         <horaInicial xsi:type="xsd:string">?</horaInicial>
+         <horaFinal xsi:type="xsd:string">?</horaFinal>
+      </sch:getPendenciaTecnica>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getPendenciaTecnica"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="1b836522-c928-4675-bed0-dc96adf4af21" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getRastreabilidade" name="getRastreabilidade" bindingOperationName="getRastreabilidade" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="152dc855-6258-45da-afa4-00a17b02625a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getRastreabilidade soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <dataInicial xsi:type="xsd:string">?</dataInicial>
+         <dataFinal xsi:type="xsd:string">?</dataFinal>
+         <horaInicial xsi:type="xsd:string">?</horaInicial>
+         <horaFinal xsi:type="xsd:string">?</horaFinal>
+      </sch:getRastreabilidade>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getRastreabilidade"/></con:call></con:operation><con:operation id="90e9d3a6-521d-4c9c-8aaa-4134f319731b" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getResultado" name="getResultado" bindingOperationName="getResultado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="ef88fe8d-a53b-4cc3-810c-9d66d611d442" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getResultado soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">15665</login>
+         <passwd xsi:type="xsd:string">5431</passwd>
+         <XML xsi:type="xsd:string"><![CDATA[<Registro>
+  <Protocolo>2</Protocolo>
+  <ID>1767</ID>
+  <Lote>
+    <CodLab>15665</CodLab>
+    <CodLoteLab>1003</CodLoteLab>
+    <DataLote>2021-09-21</DataLote>
+    <HoraLote>11:53:34</HoraLote>
+    <Pedido>
+      <CodPedLab>800005106628</CodPedLab>
+      <DataPed>2021-09-21</DataPed>
+      <HoraPed>11:47:00</HoraPed>
+      <Paciente>
+        <CodPacLab>100014650079</CodPacLab>
+        <Nome>Teste Integração Pardini</Nome>
+        <Sexo>Masculino</Sexo>
+        <DataNasc>1980-01-01</DataNasc>
+      </Paciente>
+      <Exame>
+        <IdTuboLab>800005106628</IdTuboLab>
+        <CodExmApoio>SWAB|COVID19|1</CodExmApoio>
+        <CodExmLab>4625</CodExmLab>
+        <DescMat>Swab</DescMat>
+        <DataColeta>2021-09-21</DataColeta>
+        <HoraColeta>11:47:00</HoraColeta>
+      </Exame>
+    </Pedido>
+  </Lote>
+</Registro>]]]]>><![CDATA[</XML>
+      </sch:getResultado>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getResultado"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation id="eff5f6f9-9f29-4120-818a-40dcc08e18fe" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getResultadoPedido" name="getResultadoPedido" bindingOperationName="getResultadoPedido" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="690b90e3-2e6a-438c-8cdf-d85ecc17c3db" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getResultadoPedido soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <anoCodPedApoio xsi:type="xsd:long">?</anoCodPedApoio>
+         <CodPedApoio xsi:type="xsd:string">?</CodPedApoio>
+         <CodExmApoio xsi:type="xsd:string">?</CodExmApoio>
+         <PDF xsi:type="xsd:long">?</PDF>
+         <versaoResultado xsi:type="xsd:long">?</versaoResultado>
+         <papelTimbrado xsi:type="xsd:boolean">?</papelTimbrado>
+      </sch:getResultadoPedido>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getResultadoPedido"/></con:call></con:operation><con:operation id="3738ffe7-7fd1-4699-869c-b6fc91d63247" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getUltimoResultado" name="getUltimoResultado" bindingOperationName="getUltimoResultado" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="51e34860-2a9d-4cff-95c5-91c9d57ff72a" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:getUltimoResultado soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <XML xsi:type="xsd:string">?</XML>
+      </sch:getUltimoResultado>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.getUltimoResultado"/></con:call></con:operation><con:operation id="e4d88918-d289-4968-b7d5-8c755f4255b6" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.putInformacaoComplementar" name="putInformacaoComplementar" bindingOperationName="putInformacaoComplementar" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="2b709d96-3d67-4898-a6fe-6fdbe366e9e4" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:putInformacaoComplementar soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <XML xsi:type="xsd:string">?</XML>
+      </sch:putInformacaoComplementar>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.putInformacaoComplementar"/></con:call></con:operation><con:operation id="58889556-30c1-44c9-bf7a-581ed27ce425" isOneWay="false" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.verificarRecebimentoPedido" name="verificarRecebimentoPedido" bindingOperationName="verificarRecebimentoPedido" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="06d73c02-03aa-4255-947a-b06971c43b1e" name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>https://www.hermespardini.com.br/b2b/HPWS.XMLServer.cls</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:sch="http://hermespardini.com.br/b2b/apoio/schemas">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <sch:verificarRecebimentoPedido soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <login xsi:type="xsd:string">?</login>
+         <passwd xsi:type="xsd:string">?</passwd>
+         <ids xsi:type="xsd:string">?</ids>
+         <unidade xsi:type="xsd:long">?</unidade>
+      </sch:verificarRecebimentoPedido>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://hermespardini.com.br/b2b/apoio/schemas/HPWS.XMLServer.verificarRecebimentoPedido"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
